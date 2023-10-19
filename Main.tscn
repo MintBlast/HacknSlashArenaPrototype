@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://cr17mxw052b6v"]
+
+[ext_resource type="PackedScene" uid="uid://dipra02du7cv3" path="res://Player.tscn" id="1_j638v"]
+[ext_resource type="Resource" uid="uid://beifpgsrorqil" path="res://Controls/P1Controls.tres" id="2_53dp4"]
+[ext_resource type="Resource" uid="uid://dw5a8bo8t6xq2" path="res://Controls/P2Controls.tres" id="3_8br4a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_emyx0"]
+albedo_color = Color(0.309804, 0.811765, 0, 1)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_28rwn"]
+
+[sub_resource type="Sky" id="Sky_n6u5n"]
+sky_material = SubResource("ProceduralSkyMaterial_28rwn")
+
+[sub_resource type="Environment" id="Environment_p0bw4"]
+background_mode = 2
+sky = SubResource("Sky_n6u5n")
+
+[node name="Main" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.84501, 0, 0.534751, 0, 1, 0, -0.534751, 0, 0.84501, 2.54904, 0.562727, 6.32541)
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="Stage" type="CSGCylinder3D" parent="CSGCombiner3D"]
+radius = 9.0
+height = 4.0
+sides = 12
+material = SubResource("StandardMaterial3D_emyx0")
+
+[node name="Cutout" type="CSGCylinder3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+operation = 2
+radius = 8.0
+height = 4.0
+sides = 12
+
+[node name="Player" parent="." instance=ExtResource("1_j638v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.924)
+controls = ExtResource("2_53dp4")
+
+[node name="Player2" parent="." instance=ExtResource("1_j638v")]
+controls = ExtResource("3_8br4a")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.328531, 0.661171, -0.674478, 0.515598, 0.472777, 0.714591, 0.791344, -0.582525, -0.185576, 1.99642, 5.40763, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_p0bw4")
+
+[editable path="Player"]
+[editable path="Player/Skin/PlayerTest"]
+[editable path="Player2"]
+[editable path="Player2/Skin/PlayerTest"]

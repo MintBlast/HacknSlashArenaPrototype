@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjw3m50bhy7yr"]
+
+[ext_resource type="Script" path="res://Controls/Controls.gd" id="1_wef1n"]
+
+[node name="Controls" type="Node" groups=["controls"]]
+script = ExtResource("1_wef1n")

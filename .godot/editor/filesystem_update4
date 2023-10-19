@@ -1,0 +1,7 @@
+res://Player.tscn
+res://Controls/Controls.tscn
+res://Main.tscn
+res://Player.gd
+res://Controls/Controls.gd
+res://Controls/P1Controls.tres
+res://Controls/P2Controls.tres

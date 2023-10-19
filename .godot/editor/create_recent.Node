@@ -1,0 +1,11 @@
+Node
+WorldEnvironment
+DirectionalLight3D
+Camera3D
+CSGCylinder3D
+CSGBox3D
+Node3D
+AnimationPlayer
+CSGCombiner3D
+CollisionShape3D
+CharacterBody3D

@@ -1,0 +1,13 @@
+2a60927148abd1d33b818b535e306557
+::res://::1697685308
+icon.svg::CompressedTexture2D::2139269904603069597::1692239620::1692239625::1::::<><>::
+Main.tscn::PackedScene::6021691147333481999::1697685232::0::1::::<><>::uid://dipra02du7cv3
+Player.gd::GDScript::-1::1697684341::0::1::::<>CharacterBody3D<>::
+Player.tscn::PackedScene::7752772010329255374::1697685167::0::1::::<><>::uid://dcpmnwd8va4fa<>res://Player.gd
+PlayerTest.glb::PackedScene::7331358385575807950::1692246646::1692246658::1::::<><>::uid://b7b0vubtm715b<>uid://cmo2rl8g03n4b
+PlayerTest_Image.png::CompressedTexture2D::3757227295945767794::1692246647::1692246660::1::::<><>::
+PlayerTest_Paladin_diffuse.png::CompressedTexture2D::4636084537247766725::1692246655::1692246663::1::::<><>::
+PlayerTest_Paladin_normal.png::CompressedTexture2D::5645679125943040127::1692246650::1692246663::1::::<><>::
+::res://Controls/::1697685167
+Controls.gd::GDScript::-1::1697682629::0::1::::Controls<>Node<>::
+Controls.tscn::PackedScene::3065259706725412945::1697685167::0::1::::<><>::res://Controls/Controls.gd
